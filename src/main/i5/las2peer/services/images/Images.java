@@ -160,7 +160,7 @@ public class Images extends Service {
         }catch(Exception e){  
             JSONObject errorJson = new JSONObject();
             HttpResponse error = new HttpResponse(errorJson.toJSONString(), HttpURLConnection.HTTP_INTERNAL_ERROR);
-            return delete;
+            return error;
         }
     }
     return null;

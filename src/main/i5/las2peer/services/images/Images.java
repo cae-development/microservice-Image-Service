@@ -148,19 +148,19 @@ public class Images extends Service {
   public HttpResponse delete(@PathParam("id") String id) {
 
     // delete
-        try {
-            conn = dbm.getConnection();
-            PreparedStatement statement = conn.prepareStatement("DELETE FROM images where id = "+id+" limit 1;");
-            statement.executeUpdate();  
-            JSONObject deleteJson = new JSONObject(); 
-            deleteJson.put("status","deleted");
-            HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
-            return delete; 
-        }catch(Exception e){  
-            JSONObject errorJson = new JSONObject();
-            HttpResponse error = new HttpResponse(errorJson.toJSONString(), HttpURLConnection.HTTP_INTERNAL_ERROR);
-            return error;
-        } 
+    try {
+        conn = dbm.getConnection();
+        PreparedStatement statement = conn.prepareStatement("DELETE FROM images where id = "+id+" limit 1;");
+        statement.executeUpdate();  
+        JSONObject deleteJson = new JSONObject(); 
+        deleteJson.put("status","deleted");
+        HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
+        return delete; 
+    }catch(Exception e){  
+        JSONObject errorJson = new JSONObject();
+        HttpResponse error = new HttpResponse(errorJson.toJSONString(), HttpURLConnection.HTTP_INTERNAL_ERROR);
+        return error;
+    } 
 
   }
 

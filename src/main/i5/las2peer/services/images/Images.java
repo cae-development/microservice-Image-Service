@@ -73,6 +73,35 @@ public class Images extends Service {
   // //////////////////////////////////////////////////////////////////////////////////////
 
 
+  /**
+   * 
+   * putImage
+   * 
+   *
+   * 
+   * @return HttpResponse  
+   * 
+   */
+  @PUT
+  @Path("//")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_CREATED, message = "created")
+  })
+  @ApiOperation(value = "putImage", notes = " ")
+  public HttpResponse putImage() {
+
+    // created
+    boolean created_condition = true;
+    if(created_condition) {
+      JSONObject createdResult = new JSONObject();
+      HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
+      return created;
+    }
+    return null;
+  }
+
 
 
 

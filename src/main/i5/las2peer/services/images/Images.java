@@ -155,7 +155,8 @@ public class Images extends Service {
         ResultSet result = statement.executeQuery();
         while (result.next()) { 
             JSONObject imageJson = new JSONObject(); 
-            imageJson.put("")
+            imageJson.put("id",result.getInt("id")); 
+            imageJson.put("url",result.getString("url"));
           array.add(result.getInt("number"));
         }
         resultJson.put("numbers", array);

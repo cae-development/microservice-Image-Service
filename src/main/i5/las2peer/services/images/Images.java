@@ -75,6 +75,35 @@ public class Images extends Service {
 
   /**
    * 
+   * test
+   * 
+   *
+   * 
+   * @return HttpResponse  
+   * 
+   */
+  @GET
+  @Path("/test")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "test")
+  })
+  @ApiOperation(value = "test", notes = " ")
+  public HttpResponse test() {
+
+    // test
+    boolean test_condition = true;
+    if(test_condition) {
+      JSONObject testResult = new JSONObject();
+      HttpResponse test = new HttpResponse(testResult.toJSONString(), HttpURLConnection.HTTP_OK);
+      return test;
+    }
+    return null;
+  }
+
+  /**
+   * 
    * putImage
    * 
    * @param image a JSONObject 

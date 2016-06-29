@@ -158,12 +158,10 @@ public class Images extends Service {
             HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
             return delete; 
         }catch(Exception e){  
-
+            JSONObject errorJson = new JSONObject();
+            HttpResponse error = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
+            return delete;
         }
-
-      JSONObject deleteJson = new JSONObject();
-      HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
-      return delete;
     }
     return null;
   }

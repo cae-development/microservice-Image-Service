@@ -159,7 +159,7 @@ public class Images extends Service {
             return delete; 
         }catch(Exception e){  
             JSONObject errorJson = new JSONObject();
-            HttpResponse error = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
+            HttpResponse error = new HttpResponse(errorJson.toJSONString(), HttpURLConnection.HTTP_OK);
             return delete;
         }
     }

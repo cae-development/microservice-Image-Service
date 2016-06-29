@@ -146,6 +146,7 @@ public class Images extends Service {
   })
   @ApiOperation(value = "getImages", notes = " ")
   public HttpResponse getImages() {
+    JSONObject resultJson = new JSONObject();
     JSONArray array = new JSONArray();
     Connection conn = null;
     try {

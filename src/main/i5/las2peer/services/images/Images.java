@@ -157,7 +157,6 @@ public class Images extends Service {
         return delete; 
     }catch(Exception e){   
         e.printStackTrace();
-        JSONObject errorJson = new JSONObject();
         HttpResponse error = new HttpResponse("Internal Error: " + e.getMessage(), HttpURLConnection.HTTP_INTERNAL_ERROR);
         return error;
     } 

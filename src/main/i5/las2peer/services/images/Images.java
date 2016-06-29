@@ -108,7 +108,14 @@ public class Images extends Service {
     boolean created_condition = true;
     if(created_condition) {
       JSONObject createdResult = new JSONObject(); 
-      String url = (String) image_JSON.get("url"); 
+      String url = (String) image_JSON.get("url");  
+  
+Connection conn = null;
+      try {
+        conn = dbm.getConnection();
+        PreparedStatement statement = conn.prepareStatement("Insert into test (number) Values (1);");
+        statement.executeUpdate();
+
       createdResult.put("status",url);
       HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
       return created;

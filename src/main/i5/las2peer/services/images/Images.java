@@ -115,7 +115,8 @@ public class Images extends Service {
         conn = dbm.getConnection();
         PreparedStatement statement = conn.prepareStatement("Insert into images (url) Values ('"+url+"');");
         statement.executeUpdate();
-        conn.close();
+        conn.close(); 
+
         createdResult.put("status","created");
         HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
         return created; 

@@ -152,7 +152,8 @@ public class Images extends Service {
     try {
         conn = dbm.getConnection();
         PreparedStatement statement = conn.prepareStatement("DELETE FROM images where id = "+id+" limit 1;");
-        statement.executeUpdate();  
+        statement.executeUpdate();   
+        conn.close();
         JSONObject deleteJson = new JSONObject(); 
         deleteJson.put("status","deleted");
         HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);

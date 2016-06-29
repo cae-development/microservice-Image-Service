@@ -118,7 +118,10 @@ public class Images extends Service {
 
         createdResult.put("status","created");
         HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
-        return created;
+        return created; 
+      }catch(Exception e){ 
+         
+      }
     }
     return null;
   }

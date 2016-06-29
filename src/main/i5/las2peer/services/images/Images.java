@@ -110,7 +110,7 @@ public class Images extends Service {
       JSONObject createdResult = new JSONObject(); 
       String url = (String) image_JSON.get("url");  
   
-Connection conn = null;
+      Connection conn = null;
       try {
         conn = dbm.getConnection();
         PreparedStatement statement = conn.prepareStatement("Insert into test (number) Values (1);");

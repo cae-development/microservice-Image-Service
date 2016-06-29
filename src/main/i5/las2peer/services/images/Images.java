@@ -113,7 +113,7 @@ public class Images extends Service {
       Connection conn = null;
       try {
         conn = dbm.getConnection();
-        PreparedStatement statement = conn.prepareStatement("Insert into images (url) Values ('');");
+        PreparedStatement statement = conn.prepareStatement("Insert into images (url) Values ('""');");
         statement.executeUpdate();
 
       createdResult.put("status",url);

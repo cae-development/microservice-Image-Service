@@ -77,7 +77,7 @@ public class Images extends Service {
    * 
    * putImage
    * 
-
+   * @param imageJson a JSONObject 
    * 
    * @return HttpResponse  
    * 
@@ -85,12 +85,13 @@ public class Images extends Service {
   @PUT
   @Path("/")
   @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.TEXT_PLAIN)
+  @Consumes(MediaType.APPLICATION_JSON)
   @ApiResponses(value = {
        @ApiResponse(code = HttpURLConnection.HTTP_CREATED, message = "created")
   })
   @ApiOperation(value = "putImage", notes = " ")
-  public HttpResponse putImage() {
+  public HttpResponse putImage(@ContentParam String imageJson) {
+    JSONObject imageJson_JSON = (JSONObject) JSONValue.parse(imageJson);
 
     // created
     boolean created_condition = true;

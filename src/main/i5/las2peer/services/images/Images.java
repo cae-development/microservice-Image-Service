@@ -155,7 +155,8 @@ public class Images extends Service {
         deleteJson.put("status","deleted");
         HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
         return delete; 
-    }catch(Exception e){  
+    }catch(Exception e){   
+        e.printStackTrace(e);
         JSONObject errorJson = new JSONObject();
         HttpResponse error = new HttpResponse(errorJson.toJSONString(), HttpURLConnection.HTTP_INTERNAL_ERROR);
         return error;

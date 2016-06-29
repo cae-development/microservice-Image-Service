@@ -105,13 +105,11 @@ public class Images extends Service {
     JSONObject image_JSON = (JSONObject) JSONValue.parse(image);
 
     // created
-    boolean created_condition = true;
-    if(created_condition) {
-      JSONObject createdResult = new JSONObject(); 
-      String url = (String) image_JSON.get("url");  
+    JSONObject createdResult = new JSONObject(); 
+    String url = (String) image_JSON.get("url");  
   
-      Connection conn = null;
-      try {
+    Connection conn = null;
+    try {
         conn = dbm.getConnection();
         PreparedStatement statement = conn.prepareStatement("Insert into images (url) Values ('"+url+"');");
         statement.executeUpdate();

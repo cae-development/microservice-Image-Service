@@ -146,9 +146,9 @@ public class Images extends Service {
   })
   @ApiOperation(value = "getImages", notes = " ")
   public HttpResponse getImages() {
- JSONArray array = new JSONArray();
-      Connection conn = null;
-      try {
+    JSONArray array = new JSONArray();
+    Connection conn = null;
+    try {
         conn = dbm.getConnection();
         PreparedStatement statement = conn.prepareStatement("Insert into test (number) Values (1);");
         statement.executeUpdate();

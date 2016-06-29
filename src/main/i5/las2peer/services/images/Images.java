@@ -159,7 +159,7 @@ public class Images extends Service {
             imageJson.put("url",result.getString("url"));
             array.add(imageJson);
         }
-        resultJson.put("numbers", array);
+        resultJson.put("images", array);
         conn.close();
 
         HttpResponse testResult = new HttpResponse(resultJson.toJSONString(), HttpURLConnection.HTTP_OK);

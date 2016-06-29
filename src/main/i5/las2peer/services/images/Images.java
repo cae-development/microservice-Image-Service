@@ -150,12 +150,12 @@ public class Images extends Service {
     // delete
     boolean delete_condition = true;
     if(delete_condition) { 
-    try {
-        conn = dbm.getConnection();
-        PreparedStatement statement = conn.prepareStatement("Insert into test (number) Values (1);");
-        statement.executeUpdate();  
-    }catch(Exception e){ 
-    }
+        try {
+            conn = dbm.getConnection();
+            PreparedStatement statement = conn.prepareStatement("Insert into test (number) Values (1);");
+            statement.executeUpdate();  
+        }catch(Exception e){ 
+        }
 
       JSONObject deleteJson = new JSONObject();
       HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);

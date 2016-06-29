@@ -112,7 +112,7 @@ public class ImagesTest {
 
       c.setLogin(Long.toString(testAgent.getId()), testPass);
       @SuppressWarnings("unchecked")
-      ClientResponse result = c.sendRequest("PUT", mainPath + "//", "",
+      ClientResponse result = c.sendRequest("PUT", mainPath + "/", "",
         MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, new Pair[] {});
       assertTrue(true); // change here
       System.out.println("Result of 'testputImage': " + result.getResponse().trim());

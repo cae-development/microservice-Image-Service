@@ -83,7 +83,7 @@ public class Images extends Service {
    * 
    */
   @PUT
-  @Path("//")
+  @Path("/")
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {

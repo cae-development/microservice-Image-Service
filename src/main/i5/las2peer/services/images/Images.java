@@ -163,7 +163,7 @@ public class Images extends Service {
         conn.close();
 
         HttpResponse imageResult = new HttpResponse(resultJson.toJSONString(), HttpURLConnection.HTTP_OK);
-        return testResult;
+        return imageResult;
       } catch (Exception e) {
         e.printStackTrace();
         HttpResponse testResult = new HttpResponse("Internal Error", HttpURLConnection.HTTP_INTERNAL_ERROR);

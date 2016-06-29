@@ -146,15 +146,8 @@ public class Images extends Service {
   })
   @ApiOperation(value = "getImages", notes = " ")
   public HttpResponse getImages() {
+ 
 
-    // images
-    boolean images_condition = true;
-    if(images_condition) {
-      JSONObject imagesJson = new JSONObject();
-      HttpResponse images = new HttpResponse(imagesJson.toJSONString(), HttpURLConnection.HTTP_OK);
-      return images;
-    }
-    return null;
   }
 
 

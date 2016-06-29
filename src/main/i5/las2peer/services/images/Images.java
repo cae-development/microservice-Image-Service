@@ -168,7 +168,6 @@ public class Images extends Service {
         return testResult;
       }
 
-
   }
 
 

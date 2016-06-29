@@ -116,7 +116,7 @@ public class Images extends Service {
         PreparedStatement statement = conn.prepareStatement("Insert into images (url) Values ('"+url+"');");
         statement.executeUpdate();
 
-        createdResult.put("status",url);
+        createdResult.put("status","created");
         HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
         return created;
     }

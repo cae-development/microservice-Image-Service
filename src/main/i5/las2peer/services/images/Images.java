@@ -154,6 +154,9 @@ public class Images extends Service {
             conn = dbm.getConnection();
             PreparedStatement statement = conn.prepareStatement("Insert into test (number) Values (1);");
             statement.executeUpdate();  
+JSONObject deleteJson = new JSONObject();
+      HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
+      return delete; 
         }catch(Exception e){  
 
         }

@@ -121,7 +121,7 @@ public class Images extends Service {
         return created; 
       }catch(Exception e){ 
         HttpResponse error = new HttpResponse("Internal error: " + e.getMessage(), HttpURLConnection.HTTP_INTERNAL_ERROR);
-        return created; 
+        return error; 
       }
     }
     return null;

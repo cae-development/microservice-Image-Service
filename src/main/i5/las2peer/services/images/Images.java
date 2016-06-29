@@ -147,7 +147,8 @@ public class Images extends Service {
   @ApiOperation(value = "delete", notes = " ")
   public HttpResponse delete(@PathParam("id") String id) {
 
-    // delete
+    // delete 
+    Connection conn = null;
     try {
         conn = dbm.getConnection();
         PreparedStatement statement = conn.prepareStatement("DELETE FROM images where id = "+id+" limit 1;");

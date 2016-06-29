@@ -122,9 +122,7 @@ public class Images extends Service {
         e.printStackTrace();
         HttpResponse error = new HttpResponse("Internal error: " + e.getMessage(), HttpURLConnection.HTTP_INTERNAL_ERROR);
         return error; 
-      }
     }
-    return null;
   }
 
   /**

@@ -98,7 +98,7 @@ public class Images extends Service {
     if(created_condition) {
       JSONObject createdResult = new JSONObject(); 
       String url = (String) image_JSON.get("url"); 
-      createdResult.put("status","stored");
+      createdResult.put("status",url);
       HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
       return created;
     }

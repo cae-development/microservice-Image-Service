@@ -7,6 +7,7 @@
 -- Table structure for table images.
 --
 CREATE TABLE cae-schema.images (
+  url varchar(255) ,
   id int ,
 CONSTRAINT id_PK PRIMARY KEY (id)
 );

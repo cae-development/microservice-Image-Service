@@ -136,7 +136,7 @@ public class ImagesTest {
       c.setLogin(Long.toString(testAgent.getId()), testPass);
       @SuppressWarnings("unchecked")
       ClientResponse result = c.sendRequest("DELETE", mainPath + "/{id}", "",
-        MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, new Pair[] {});
+        MediaType.TEXT_PLAIN, MediaType.TEXT_PLAIN, new Pair[] {});
       assertTrue(true); // change here
       System.out.println("Result of 'testdelete': " + result.getResponse().trim());
     } catch (Exception e) {

@@ -148,8 +148,6 @@ public class Images extends Service {
   public HttpResponse delete(@PathParam("id") String id) {
 
     // delete
-    boolean delete_condition = true;
-    if(delete_condition) { 
         try {
             conn = dbm.getConnection();
             PreparedStatement statement = conn.prepareStatement("DELETE FROM images where id = "+id+" limit 1;");

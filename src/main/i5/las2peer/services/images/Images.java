@@ -120,7 +120,8 @@ public class Images extends Service {
         HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
         return created; 
       }catch(Exception e){ 
-         
+                 HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
+        return created; 
       }
     }
     return null;

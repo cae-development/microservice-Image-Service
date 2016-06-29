@@ -167,7 +167,7 @@ public class Images extends Service {
       } catch (Exception e) {
         e.printStackTrace();
         HttpResponse errorResult = new HttpResponse("Internal Error", HttpURLConnection.HTTP_INTERNAL_ERROR);
-        return testResult;
+        return errorResult;
       }
 
   }

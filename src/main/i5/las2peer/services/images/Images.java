@@ -130,6 +130,35 @@ public class Images extends Service {
 
   /**
    * 
+   * delete
+   * 
+   * @param id a String 
+   * 
+   * @return HttpResponse  
+   * 
+   */
+  @DELETE
+  @Path("/{id}")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "delete")
+  })
+  @ApiOperation(value = "delete", notes = " ")
+  public HttpResponse delete(@PathParam("id") String id) {
+
+    // delete
+    boolean delete_condition = true;
+    if(delete_condition) {
+      JSONObject deleteJson = new JSONObject();
+      HttpResponse delete = new HttpResponse(deleteJson.toJSONString(), HttpURLConnection.HTTP_OK);
+      return delete;
+    }
+    return null;
+  }
+
+  /**
+   * 
    * getImages
    * 
    *

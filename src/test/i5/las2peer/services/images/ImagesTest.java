@@ -101,29 +101,6 @@ public class ImagesTest {
 
   /**
    * 
-   * Test for the test method.
-   * 
-   */
-  @Test
-  public void testtest() {
-    MiniClient c = new MiniClient();
-    c.setAddressPort(HTTP_ADDRESS, HTTP_PORT);
-    try {
-
-      c.setLogin(Long.toString(testAgent.getId()), testPass);
-      @SuppressWarnings("unchecked")
-      ClientResponse result = c.sendRequest("GET", mainPath + "/test", "",
-        MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, new Pair[] {});
-      assertTrue(true); // change here
-      System.out.println("Result of 'testtest': " + result.getResponse().trim());
-    } catch (Exception e) {
-      e.printStackTrace();
-      fail("Exception: " + e);
-    }
-  }
-
-  /**
-   * 
    * Test for the putImage method.
    * 
    */
@@ -139,6 +116,29 @@ public class ImagesTest {
         MediaType.APPLICATION_JSON, MediaType.APPLICATION_JSON, new Pair[] {});
       assertTrue(true); // change here
       System.out.println("Result of 'testputImage': " + result.getResponse().trim());
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+  }
+
+  /**
+   * 
+   * Test for the abc method.
+   * 
+   */
+  @Test
+  public void testabc() {
+    MiniClient c = new MiniClient();
+    c.setAddressPort(HTTP_ADDRESS, HTTP_PORT);
+    try {
+
+      c.setLogin(Long.toString(testAgent.getId()), testPass);
+      @SuppressWarnings("unchecked")
+      ClientResponse result = c.sendRequest("GET", mainPath + "/anc", "",
+        MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, new Pair[] {});
+      assertTrue(true); // change here
+      System.out.println("Result of 'testabc': " + result.getResponse().trim());
     } catch (Exception e) {
       e.printStackTrace();
       fail("Exception: " + e);

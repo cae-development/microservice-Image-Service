@@ -75,35 +75,6 @@ public class Images extends Service {
 
   /**
    * 
-   * test
-   * 
-   *
-   * 
-   * @return HttpResponse  
-   * 
-   */
-  @GET
-  @Path("/test")
-  @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.TEXT_PLAIN)
-  @ApiResponses(value = {
-       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "test")
-  })
-  @ApiOperation(value = "test", notes = " ")
-  public HttpResponse test() {
-
-    // test
-    boolean test_condition = true;
-    if(test_condition) {
-      JSONObject testResult = new JSONObject();
-      HttpResponse test = new HttpResponse(testResult.toJSONString(), HttpURLConnection.HTTP_OK);
-      return test;
-    }
-    return null;
-  }
-
-  /**
-   * 
    * putImage
    * 
    * @param image a JSONObject 
@@ -142,6 +113,35 @@ public class Images extends Service {
         HttpResponse error = new HttpResponse("Internal error: " + e.getMessage(), HttpURLConnection.HTTP_INTERNAL_ERROR);
         return error; 
       }
+    }
+    return null;
+  }
+
+  /**
+   * 
+   * abc
+   * 
+   *
+   * 
+   * @return HttpResponse  
+   * 
+   */
+  @GET
+  @Path("/anc")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "abc")
+  })
+  @ApiOperation(value = "abc", notes = " ")
+  public HttpResponse abc() {
+
+    // abc
+    boolean abc_condition = true;
+    if(abc_condition) {
+      JSONObject abcResult = new JSONObject();
+      HttpResponse abc = new HttpResponse(abcResult.toJSONString(), HttpURLConnection.HTTP_OK);
+      return abc;
     }
     return null;
   }

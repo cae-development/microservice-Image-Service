@@ -151,9 +151,7 @@ public class Images extends Service {
     Connection conn = null;
     try {
         conn = dbm.getConnection();
-        PreparedStatement statement = conn.prepareStatement("Insert into test (number) Values (1);");
-        statement.executeUpdate();
-        statement = conn.prepareStatement("Select * from test");
+        statement = conn.prepareStatement("Select * from images limit 10");
         ResultSet result = statement.executeQuery();
         while (result.next()) {
           array.add(result.getInt("number"));

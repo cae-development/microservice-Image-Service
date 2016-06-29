@@ -97,7 +97,7 @@ public class Images extends Service {
     boolean created_condition = true;
     if(created_condition) {
       JSONObject createdResult = new JSONObject(); 
-      createdResult.put("status":"stored");
+      createdResult.put("status","stored");
       HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
       return created;
     }

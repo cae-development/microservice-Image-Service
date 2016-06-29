@@ -119,7 +119,8 @@ public class Images extends Service {
         createdResult.put("status","created");
         HttpResponse created = new HttpResponse(createdResult.toJSONString(), HttpURLConnection.HTTP_CREATED);
         return created; 
-      }catch(Exception e){ 
+      }catch(Exception e){  
+        e.printStacktrace(e);
         HttpResponse error = new HttpResponse("Internal error: " + e.getMessage(), HttpURLConnection.HTTP_INTERNAL_ERROR);
         return error; 
       }

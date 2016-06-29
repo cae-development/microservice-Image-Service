@@ -162,7 +162,7 @@ public class Images extends Service {
         resultJson.put("images", array);
         conn.close();
 
-        HttpResponse testResult = new HttpResponse(resultJson.toJSONString(), HttpURLConnection.HTTP_OK);
+        HttpResponse imageResult = new HttpResponse(resultJson.toJSONString(), HttpURLConnection.HTTP_OK);
         return testResult;
       } catch (Exception e) {
         e.printStackTrace();

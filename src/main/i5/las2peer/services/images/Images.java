@@ -186,7 +186,7 @@ public class Images extends Service {
     JSONObject resultJson = new JSONObject();
     JSONArray array = new JSONArray();
     Connection conn = null;
-    try {aa
+    try {
         conn = dbm.getConnection();
         PreparedStatement statement = conn.prepareStatement("Select * from images limit 10");
         ResultSet result = statement.executeQuery();

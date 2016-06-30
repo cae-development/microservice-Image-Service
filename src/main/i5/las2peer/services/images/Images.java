@@ -144,7 +144,6 @@ public class Images extends Service {
   @ApiOperation(value = "delete", notes = " ")
   public HttpResponse delete(@ContentParam String image) {
     JSONObject image_JSON = (JSONObject) JSONValue.parse(image);
-
     // delete 
     Connection conn = null;
     try { 

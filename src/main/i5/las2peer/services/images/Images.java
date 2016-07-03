@@ -149,7 +149,8 @@ public class Images extends Service {
     try { 
         String id = (String) image_JSON.get("id");
         conn = dbm.getConnection();
-        PreparedStatement statement = conn.prepareStatement("DELETE FROM images where id = ? limit 1;");
+        PreparedStatement statement = conn.prepareStatement("DELETE FROM images where id = ? limit 1;"); 
+statement.setInt(1,Integer.parseInt(id));
         statement.executeUpdate();   
         conn.close();
         JSONObject deleteJson = new JSONObject(); 

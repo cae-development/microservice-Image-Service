@@ -132,11 +132,11 @@ public class ImagesTest {
     MiniClient c = new MiniClient();
     c.setAddressPort(HTTP_ADDRESS, HTTP_PORT);
     try {
-      JSONObject image = new JSONObject();
+      String id = "initialized";
       c.setLogin(Long.toString(testAgent.getId()), testPass);
       @SuppressWarnings("unchecked")
-      ClientResponse result = c.sendRequest("DELETE", mainPath + "/", image.toJSONString(),
-        MediaType.APPLICATION_JSON, MediaType.APPLICATION_JSON, new Pair[] {});
+      ClientResponse result = c.sendRequest("DELETE", mainPath + "/", "",
+        MediaType.TEXT_PLAIN, MediaType.APPLICATION_JSON, new Pair[] {});
       assertTrue(true); // change here
       System.out.println("Result of 'testdelete': " + result.getResponse().trim());
     } catch (Exception e) {

@@ -93,7 +93,7 @@ public class Images extends Service {
    * @return HttpResponse  
    * 
    */
-  @PUT
+  @GET
   @Path("/")
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.APPLICATION_JSON)

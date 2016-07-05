@@ -112,7 +112,7 @@ public class ImagesTest {
       JSONObject image = new JSONObject();
       c.setLogin(Long.toString(testAgent.getId()), testPass);
       @SuppressWarnings("unchecked")
-      ClientResponse result = c.sendRequest("PUT", mainPath + "/", image.toJSONString(),
+      ClientResponse result = c.sendRequest("GET", mainPath + "/", image.toJSONString(),
         MediaType.APPLICATION_JSON, MediaType.APPLICATION_JSON, new Pair[] {});
       assertTrue(true); // change here
       System.out.println("Result of 'testputImage': " + result.getResponse().trim());
